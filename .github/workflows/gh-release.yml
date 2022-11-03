@@ -16,10 +16,9 @@ jobs:
       contents: write
 
     steps:
-    - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
+    - uses: actions/checkout@v3
     
-    - uses: ncipollo/release-action@58ae73b360456532aafd58ee170c045abbeaee37 # tag=v1.10.0
+    - uses: marvinpinto/action-automatic-releases@latest
       with:
-        allowUpdates: true
-        generateReleaseNotes: true
-        token: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        prerelease: false
